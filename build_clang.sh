@@ -36,7 +36,7 @@ function set_package_link()
   pushd $BUILD_DIR &>/dev/null
 
   DOWNLOAD_PAGE=llvmorg-$CLANG_VERSION
-  download https://github.com/llvm/llvm-project/releases/tag/$DOWNLOAD_PAGE &>/dev/null
+  download https://github.com/llvm/llvm-project/releases/expanded_assets/$DOWNLOAD_PAGE &>/dev/null
 
   if [[ $(file $DOWNLOAD_PAGE) == *gzip* ]]; then
     mv $DOWNLOAD_PAGE $DOWNLOAD_PAGE.gz
